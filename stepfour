@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step Four: Where the Stars Align</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      color: #ffa500;
+    }
+    input, button {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ffa500;
+      color: #121212;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Step Four: Where the Stars Align</h1>
+  <p>Find the place hidden at these coordinates:</p>
+
+  <p style="font-size: 1.2rem;">📍 <strong>25.121926, 55.377480</strong></p>
+
+  <p>Once you figure out the place's name, enter it below:</p>
+
+  <input type="text" id="answer" placeholder="Type here...">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById('answer').value.toLowerCase();
+      if (answer.includes("seven stars") || answer.includes("7 stars")) {
+        window.location.href = "stepfive.html";
+      } else {
+        document.getElementById('result').textContent = "❌ Nope — look again!";
+      }
+    }
+  </script>
+
+</body>
+</html>
