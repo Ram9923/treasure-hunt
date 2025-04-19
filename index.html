@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to the Hunt</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: monospace;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🕵️ Welcome to the Hunt</h1>
+  <p>You’ve just stumbled into a hidden corner of the digital world.<br>
+  This is no ordinary QR code — you’ve officially started <b>Rami’s Treasure Hunt</b>.</p>
+  
+  <p>Your first step is simple:</p>
+  
+  <h3>Puzzle #1</h3>
+  <p>"I am always hungry, I must always be fed. The finger I touch, will soon turn red. What am I?"</p>
+  
+  <input type="text" id="answer" placeholder="Your Answer">
+  <button onclick="checkAnswer()">Submit</button>
+  
+  <p id="result"></p>
+  
+  <script>
+    function checkAnswer() {
+      var answer = document.getElementById('answer').value.toLowerCase();
+      if (answer === "fire") {
+        window.location.href = "nextpage.html"; // replace with your actual next page
+      } else {
+        document.getElementById('result').innerText = "Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
