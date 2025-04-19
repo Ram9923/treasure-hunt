@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 2: Aerial Secrets</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: monospace;
+      text-align: center;
+      padding: 40px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    iframe {
+      margin: 20px 0;
+      border: 4px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎶 Level 2: Aerial Secrets 🎶</h1>
+  <p>Good job on the first step — now let’s see how well you listen.</p>
+  
+  <p>Your next clue is in the song below.<br>
+  The answer is something simple… it’s what we all want to do.</p>
+  
+  <p>When you think you’ve got it — type it below and move on.</p>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/L-iepu3EtyE?start=45" 
+  title="Aerials - System of a Down" frameborder="0" allowfullscreen></iframe>
+
+<!--   <p><b>Hint:</b> Listen to the lyrics around 0:45 – 1:05…</p>
+ -->
+  <input type="text" id="answer" placeholder="Your Answer">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      var answer = document.getElementById('answer').value.toLowerCase();
+      if (answer === "play") {
+        window.location.href = "stepthree.html"; // Next step
+      } else {
+        document.getElementById('result').innerText = "Not quite. Listen closer.";
+      }
+    }
+  </script>
+</body>
+</html>
