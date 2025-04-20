@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step Six</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      font-family: monospace;
+    }
+    input {
+      margin-top: 20px;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    code {
+      background: #222;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Step Six</h1>
+  <p>Decode this message:</p>
+
+  <code>dGhlIGFuc3dlciBpcyBicmF2ZXJ5</code>
+
+  <div>
+    <input type="text" id="answer" placeholder="Decoded message">
+    <button onclick="checkAnswer()">Submit</button>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "bravery") {
+        window.location.href = "stepseven.html";
+      } else {
+        alert("Nope — decode it properly!");
+      }
+    }
+  </script>
+
+</body>
+</html>
