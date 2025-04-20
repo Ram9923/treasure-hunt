@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step Seven</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 40px;
+    }
+    .codeword {
+      font-size: 28px;
+      background: #222;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 10px;
+      background: #444;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #666;
+    }
+    .ominous {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Step Seven</h1>
+  <p>Sometimes… it’s okay to cheat. But you must always ask yourself:</p>
+  <p><em>“What are you cheating for?”</em></p>
+
+  <div class="codeword">BAGUVIX</div>
+
+  <div>
+    <input type="text" id="answer" placeholder="Answer here?">
+    <button onclick="checkAnswer()">Submit</button>
+  </div>
+
+  <div class="ominous">
+    <p>I see you're getting closer…</p>
+    <p>Are you sure you want to keep going?</p>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "infinite health") {
+        window.location.href = "stepeight.html";
+      } else {
+        alert("Nope. that's not it. try again!");
+      }
+    }
+  </script>
+
+</body>
+</html>
