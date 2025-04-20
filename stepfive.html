@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step Five</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      font-family: monospace;
+    }
+    img {
+      margin-top: 50px;
+      max-width: 80%;
+      filter: brightness(1) contrast(1);
+    }
+    input {
+      margin-top: 20px;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Step Five</h1>
+  <p>Look deeper. Sometimes what’s hidden is right in front of you.</p>
+
+  <img src="hiddenword.png" alt="Hidden Puzzle Image">
+
+  <div>
+    <input type="text" id="answer" placeholder="Your answer here">
+    <button onclick="checkAnswer()">Submit</button>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "echo") {
+        window.location.href = "stepsix.html";
+      } else {
+        alert("Not quite. Look closer!");
+      }
+    }
+  </script>
+
+</body>
+</html>
