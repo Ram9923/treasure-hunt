@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step Eight</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 40px;
+    }
+    iframe {
+      margin-top: 30px;
+      border: 3px solid #444;
+      border-radius: 8px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 10px;
+      background: #444;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #666;
+    }
+    .hint {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Step Eight</h1>
+  <p>Listen carefully. Translate the message from the void.</p>
+
+  <iframe width="320" height="180" src="https://www.youtube.com/embed/SHezDMcFqaI" 
+          title="Morse Code Audio" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+
+  <div>
+    <input type="text" id="answer" placeholder="Your translation...">
+    <button onclick="checkAnswer()">Submit</button>
+  </div>
+
+  <div class="hint">
+    <p>Hint: One word. What we all want.</p>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "freedom") {
+        window.location.href = "final.html";
+      } else {
+        alert("Not quite. Decode the Morse carefully.");
+      }
+    }
+  </script>
+
+</body>
+</html>
